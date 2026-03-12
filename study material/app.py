@@ -8,7 +8,7 @@ app.secret_key = "secret123"
 db = pymysql.connect(
     host="localhost",
     user="root",
-    password="",
+    password="root123",
     database="study_material_db",
     cursorclass=pymysql.cursors.DictCursor
 )
@@ -133,4 +133,5 @@ def logout():
 
 
 if __name__ == "__main__":
+
     app.run(debug=True)
