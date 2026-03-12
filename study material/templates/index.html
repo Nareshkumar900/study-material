@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="hero">
+
+<h1>Find Study Materials</h1>
+
+<form action="/search" method="GET">
+
+<input type="text" name="query" placeholder="Search subject">
+
+<button type="submit">Search</button>
+
+</form>
+
+</section>
+
+<section class="stats">
+
+<div class="card">
+<h2>{{ total_notes }}</h2>
+<p>Total Notes</p>
+</div>
+
+<div class="card">
+<h2>{{ total_users }}</h2>
+<p>Total Users</p>
+</div>
+
+<div class="card">
+<h2>{{ total_downloads }}</h2>
+<p>Total Downloads</p>
+</div>
+
+</section>
+
+<section class="categories">
+
+<h2>Top Categories</h2>
+
+<div class="category-grid">
+
+<div class="category">
+<a href="/subject/CSE">Computer Science</a>
+</div>
+
+<div class="category">
+<a href="/subject/IT">Information Technology</a>
+</div>
+
+<div class="category">
+<a href="/subject/ECE">Electronics</a>
+</div>
+
+<div class="category">
+<a href="/subject/EEE">Electrical</a>
+</div>
+
+<div class="category">
+<a href="/subject/MECH">Mechanical</a>
+</div>
+
+</div>
+
+<a class="view-all" href="/category">View All Departments</a>
+
+</section>
+
+{% endblock %}

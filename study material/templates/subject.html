@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>{{ department }} Subjects</h1>
+
+<div class="subject-list">
+
+{% for subject in subjects %}
+
+<div class="subject-card">
+
+<h3>{{ subject.name }}</h3>
+
+<a href="/topic/{{ subject.id }}">View Topics</a>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}
